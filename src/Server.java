@@ -17,9 +17,9 @@ public class Server {
             InputStream inputStream = clientSocket.getInputStream()){
             byte[] imageBytes = inputStream.readAllBytes();
             BufferedImage noisedImage = readFromBytes(imageBytes);
-            BufferedImage filteredImage = filterImage(noisedImage);
             ImageIO.write(noisedImage, "jpg", new File(
                     "C:\\Users\\vkuzn\\Desktop\\tzrpLab1\\lilnicenoised.jpg"));
+            BufferedImage filteredImage = filterImage(noisedImage);
             ImageIO.write(filteredImage, "jpg", new File(
                     "C:\\Users\\vkuzn\\Desktop\\tzrpLab1\\lilnicefiltered.jpg"));
 

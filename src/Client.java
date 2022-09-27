@@ -25,6 +25,7 @@ public class Client {
         int width = originalImage.getWidth();
         int height = originalImage.getHeight();
 
+        //Se convierte a Blanco y Negro
         for (int i = 0; i < height; i++) {
 
             for (int j = 0; j < width; j++) {
@@ -42,7 +43,7 @@ public class Client {
         return originalImage;
     }
 
-    private static int range(int n, double prob) {
+    public static int range(int n, double prob) {
         double res = ((100 * prob) / 10);
 
         int[] array = new int[(int) res];
